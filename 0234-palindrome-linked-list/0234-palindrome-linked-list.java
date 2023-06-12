@@ -38,7 +38,6 @@ class Solution {
 
         while(slow != null){
             if(slow.val != dummy.val){
-                System.gc();
                 return false;
             }
             slow= slow.next;
