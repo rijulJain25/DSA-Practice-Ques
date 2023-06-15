@@ -23,6 +23,7 @@ class Solution {
             pt2 = pt2.next;
         }
         pt1.next = pt;
+        System.gc();
         return head;
     }
 }
