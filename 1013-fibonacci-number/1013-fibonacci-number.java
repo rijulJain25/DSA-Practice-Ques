@@ -1,20 +1,15 @@
 class Solution {
-
-    public int fibHelp(int n, int[] dp){
-        if(n<= 1){
+    public int fib(int n) {
+        if(n <= 1){
             return n;
         }
-        if(dp[n] != -1){
-            return dp[n];
+        int prev = 0;
+        int prev2 = 1;
+        for(int i = 2; i<= n;  i++){
+            int curr = prev+prev2;
+            prev = prev2;
+            prev2 = curr;
         }
-        return dp[n] = fibHelp(n-1, dp)+fibHelp(n-2, dp);
-    }
-
-    public int fib(int n) {
-        int[] dp = new int[n+1];
-        for(int i = 0; i<n+1; i++){
-            dp[i] = -1;
-        }
-        return fibHelp(n, dp);
+        return prev2;
     }
 }
