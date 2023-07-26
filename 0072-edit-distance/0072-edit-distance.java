@@ -22,7 +22,7 @@ class Solution {
                 }
             }
         }
-
+        System.gc();
         return dp[n][m];
        
     }
