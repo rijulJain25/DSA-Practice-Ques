@@ -20,27 +20,26 @@ class Solution {
     // }
 
     public int maxProfit(int[] prices) {
-        int dp[][] = new int[prices.length+1][2];
-        for(int row[]: dp){
-            Arrays.fill(row, -1);
-        }
+        int prev[] = new int[2];
+        int curr[] = new int[2];
 
-        dp[prices.length][0] = 0;
-        dp[prices.length][1] = 0;
+        prev[0] = 0;
+        prev[1] = 0;
 
-        int profit;
+        int profit = 0;
 
         for(int ind = prices.length-1; ind>=0; ind--){
             for(int buy = 0; buy<=1; buy++){
                 if(buy == 0){
-                    profit =  Math.max(dp[ind+1][1]-prices[ind], dp[ind+1][0]);
+                    profit =  Math.max(prev[1]-prices[ind], prev[0]);
                 }else{
-                    profit =  Math.max(prices[ind]+dp[ind+1][0], dp[ind+1][1]);
+                    profit =  Math.max(prices[ind]+prev[0], prev[1]);
                 }
-                dp[ind][buy] = profit;
+                curr[buy] = profit;
             }
+            prev = curr;
         }
 
-        return dp[0][0];
+        return curr[0];
     }
 }
