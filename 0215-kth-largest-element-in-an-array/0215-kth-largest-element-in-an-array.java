@@ -23,6 +23,7 @@ class Solution {
                 return i + min;
             }
         }
+        System.gc();
         throw new IllegalStateException();
         
     }
