@@ -24,7 +24,7 @@ class Solution {
                 }
             }
         }
-
+        System.gc();
         return dp[0][0][2];
     }
 }
