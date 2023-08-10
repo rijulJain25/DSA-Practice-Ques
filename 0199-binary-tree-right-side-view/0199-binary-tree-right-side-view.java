@@ -28,6 +28,7 @@ class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> list= new ArrayList<>();
         helper(root, 0, list);
+        System.gc();
         return list;
     }
 }
