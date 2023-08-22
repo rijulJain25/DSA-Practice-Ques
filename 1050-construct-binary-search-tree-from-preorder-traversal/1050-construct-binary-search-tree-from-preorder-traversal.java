@@ -26,6 +26,6 @@ class Solution {
     }
 
     public TreeNode bstFromPreorder(int[] preorder) {
-        return helper(preorder, Integer.MAX_VALUE, new int[]{0});
+        return helper(preorder, 10000, new int[]{0});
     }
 }
