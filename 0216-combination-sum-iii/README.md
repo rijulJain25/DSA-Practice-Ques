@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/combination-sum-iii">216. Combination Sum III</a></h2><h3>Medium</h3><hr><p>Find all valid combinations of <code>k</code> numbers that sum up to <code>n</code> such that the following conditions are true:</p>
+<h2><a href="https://leetcode.com/problems/combination-sum-iii/">216. Combination Sum III</a></h2><h3>Medium</h3><hr><p>Find all valid combinations of <code>k</code> numbers that sum up to <code>n</code> such that the following conditions are true:</p>
 
 <ul>
 	<li>Only numbers <code>1</code> through <code>9</code> are used.</li>
